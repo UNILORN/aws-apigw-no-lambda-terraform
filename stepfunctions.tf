@@ -1,7 +1,7 @@
 module "todo_sfn" {
   source = "terraform-aws-modules/step-functions/aws"
 
-  name       = "todo-state-machine"
+  name = "${project_name}-state-machine"
   definition = templatefile("${path.module}/stepfunctions/statemachine.json", {
     DYNAMODB_TABLE_NAME = aws_dynamodb_table.todo_table.name
   })

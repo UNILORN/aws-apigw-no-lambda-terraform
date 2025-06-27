@@ -3,7 +3,7 @@ module "todo_api_gateway" {
 
   # API
   description   = "API for managing a ToDo list"
-  name          = var.api_name
+  name          = "${var.project_name}-api"
   protocol_type = "HTTP"
 
   # CORS configuration  

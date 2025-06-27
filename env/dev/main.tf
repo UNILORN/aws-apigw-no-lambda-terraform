@@ -1,12 +1,11 @@
 module "todo_api" {
-    source = "../../"
+  source = "../../"
 
-    region               = "ap-northeast-1"
-    api_name            = "TodoAPI"
-    dynamodb_table_name = "TodoList"
-    stage_name          = "v1"
-    tags                = {
-        Project     = "TodoAPI"
-        Environment = "demo"
-    }
+  region       = "ap-northeast-1"
+  project_name = "sample-todo-api"
+  stage_name   = "v1"
+  tags = {
+    Project     = "TodoAPI"
+    Environment = "demo"
+  }
 }

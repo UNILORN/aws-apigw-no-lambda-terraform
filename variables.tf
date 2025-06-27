@@ -1,19 +1,14 @@
+
+variable "project_name" {
+  description = "Name of the project"
+  type        = string
+  default     = "aws-apigateway-no-lambda"
+}
+
 variable "region" {
   description = "AWS region"
   type        = string
   default     = "ap-northeast-1"
-}
-
-variable "api_name" {
-  description = "Name of the API Gateway"
-  type        = string
-  default     = "TodoAPI"
-}
-
-variable "dynamodb_table_name" {
-  description = "Name of the DynamoDB table"
-  type        = string
-  default     = "TodoList"
 }
 
 variable "stage_name" {
