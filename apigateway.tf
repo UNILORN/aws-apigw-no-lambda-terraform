@@ -26,9 +26,9 @@ module "todo_api_gateway" {
 
         request_parameters = {
           StateMachineArn = module.todo_sfn.state_machine_arn
-          Input = jsonencode({
-            "operation" = "create"
-            "payload"   = "$input.json('$')"
+          Input           = jsonencode({
+            "operation" : "create",
+            "payload"   : ""
           })
         }
 
@@ -45,11 +45,12 @@ module "todo_api_gateway" {
 
         request_parameters = {
           StateMachineArn = module.todo_sfn.state_machine_arn
-          Input = jsonencode({
-            "operation" = "get"
-            "payload"   = "$input.params()"
+          Input           = jsonencode({
+            "operation" : "get",
+            "payload"   : ""
           })
         }
+
 
         payload_format_version = "1.0"
         timeout_milliseconds   = 12000

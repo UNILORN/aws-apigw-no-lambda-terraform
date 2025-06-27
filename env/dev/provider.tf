@@ -14,7 +14,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "-terraform-state-bucket"
+    bucket = "unilorn-toybox-terraform-state.unilorn.net"
     key    = "aws-apigateway-no-lambda/dev/terraform.tfstate"
     region = "ap-northeast-1"
   }
